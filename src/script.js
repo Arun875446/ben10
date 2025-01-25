@@ -136,7 +136,7 @@ gltfLoader.load("/models/armodrillo/scene.gltf", (gltf) => {
 
 let fourArms = "";
 
-gltfLoader.load("/models/fourArms/scene.gltf", (gltf) => {
+gltfLoader.load("/models/four-arms/scene.gltf", (gltf) => {
   fourArms = gltf.scene;
   fourArms.traverse((child) => {
     if (child.isMesh) {
@@ -149,6 +149,80 @@ gltfLoader.load("/models/fourArms/scene.gltf", (gltf) => {
   fourArms.rotation.set(0, Math.PI, 0);
 
   group.add(fourArms);
+});
+
+let cat = "";
+// let mixer = "";
+// let action1 = "";
+
+gltfLoader.load("/models/Cat.glb", (glb) => {
+  cat = glb.scene;
+  cat.traverse((child) => {
+    if (child.isMesh) {
+      child.castShadow = true;
+      child.receiveShadow = true;
+    }
+  });
+  cat.scale.set(0.02, 0.02, 0.02);
+  cat.position.set(-3.7, 5.8, -1);
+  cat.rotation.set(0,0, 0);
+
+  // mixer = new THREE.AnimationMixer(astro);
+  // action1 = mixer.clipAction(glb.animations[2]);
+  // action1.play();
+
+  group.add(cat);
+});
+
+
+
+let bird = "";
+// let mixer = "";
+// let action1 = "";
+
+gltfLoader.load("/models/Sparrow.glb", (glb) => {
+  bird = glb.scene;
+  bird.traverse((child) => {
+    if (child.isMesh) {
+      child.castShadow = true;
+      child.receiveShadow = true;
+    }
+  });
+  bird.scale.set(0.003, 0.003, 0.003);
+  bird.position.set(-1, 7.3, -2);
+  bird.rotation.set(0,5, 0);
+
+  // mixer = new THREE.AnimationMixer(astro);
+  // action1 = mixer.clipAction(glb.animations[2]);
+  // action1.play();
+
+  group.add(bird);
+});
+
+
+
+
+let alien = "";
+// let mixer = "";
+// let action1 = "";
+
+gltfLoader.load("/models/alien/Alien.glb", (glb) => {
+  alien = glb.scene;
+  alien.traverse((child) => {
+    if (child.isMesh) {
+      child.castShadow = true;
+      child.receiveShadow = true;
+    }
+  });
+  alien.scale.set(0.2,0.2,0.2);
+  alien.position.set(-15, 1.4, -0.5);
+  alien.rotation.set(0,0, 0);
+
+  // mixer = new THREE.AnimationMixer(astro);
+  // action1 = mixer.clipAction(glb.animations[2]);
+  // action1.play();
+
+  group.add(alien);
 });
 
 const clock = new THREE.Clock();
