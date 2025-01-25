@@ -134,64 +134,34 @@ gltfLoader.load("/models/armodrillo/scene.gltf", (gltf) => {
   group.add(armadilo);
 });
 
-let ghostFreak = "";
+let fourArms = "";
 
-gltfLoader.load("/models/ghostfreak/scene.gltf", (gltf) => {
-  ghostFreak = gltf.scene;
-  ghostFreak.traverse((child) => {
+gltfLoader.load("/models/fourArms/scene.gltf", (gltf) => {
+  fourArms = gltf.scene;
+  fourArms.traverse((child) => {
     if (child.isMesh) {
       child.castShadow = true;
       child.receiveShadow = true;
     }
-
-    // if (child.material) {
-    //   child.material = new THREE.MeshPhysicalMaterial({
-    //     color: "black", // Replace with your desired color
-    //     roughness: 0, // Adjust material properties as needed
-    //     metalness: 0.3,
-    //     transmission: 1,
-    //     ior: 1,
-    //     thickness: 0,
-    //   });
-    // }
   });
-  ghostFreak.scale.set(0.05, 0.05, 0.05);
+  fourArms.scale.set(80, 80, 80);
+  fourArms.position.set(-18, 0.3, 6);
+  fourArms.rotation.set(0, Math.PI, 0);
 
-  // ghostFreak.position.set(1, 2, 6);
-  ghostFreak.rotation.set(0, 0, 0);
-
-  group.add(ghostFreak);
-
-  let fourArms = "";
-
-  gltfLoader.load("/models/fourArms/scene.gltf", (gltf) => {
-    fourArms = gltf.scene;
-    fourArms.traverse((child) => {
-      if (child.isMesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
-      }
-    });
-    fourArms.scale.set(80, 80, 80);
-    fourArms.position.set(-18, 0.3, 6);
-    fourArms.rotation.set(0, Math.PI, 0);
-
-    group.add(fourArms);
-  });
-
-  const clock = new THREE.Clock();
-
-  const animate = () => {
-    const elapsedTime = clock.getElapsedTime();
-
-    ghostFreak.position.set(Math.sin(elapsedTime) * -20, 2, 6);
-    controls.update();
-    renderer.render(scene, camera);
-    window.requestAnimationFrame(animate);
-  };
-
-  animate();
+  group.add(fourArms);
 });
+
+const clock = new THREE.Clock();
+
+const animate = () => {
+  const elapsedTime = clock.getElapsedTime();
+
+  controls.update();
+  renderer.render(scene, camera);
+  window.requestAnimationFrame(animate);
+};
+
+animate();
 
 scene.add(group);
 // group.position.x = -12;
@@ -238,12 +208,10 @@ const dlSH = new THREE.CameraHelper(directionalLight.shadow.camera);
 scene.add(dlSH);
 dlSH.visible = false;
 
-const clock = new THREE.Clock();
-
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  ghostFreak.position.set(Math.sin(elapsedTime), 2, 6);
+  // ghostFreak.position.set(Math.sin(elapsedTime), 2, 6);
   controls.update();
   renderer.render(scene, camera);
   window.requestAnimationFrame(tick);
