@@ -1,0 +1,11 @@
+Model Information:
+* title:	FOURARMS BEN 10
+* source:	https://sketchfab.com/3d-models/fourarms-ben-10-14088fb7d0184358b55532e24e3cbaee
+* author:	Shavin vfx (https://sketchfab.com/shavinvfx)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "FOURARMS BEN 10" (https://sketchfab.com/3d-models/fourarms-ben-10-14088fb7d0184358b55532e24e3cbaee) by Shavin vfx (https://sketchfab.com/shavinvfx) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

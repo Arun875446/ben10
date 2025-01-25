@@ -1,0 +1,11 @@
+Model Information:
+* title:	ArmoDrillo
+* source:	https://sketchfab.com/3d-models/armodrillo-b41e94b55a90466086dbee50a54c9c6b
+* author:	DHedge (https://sketchfab.com/Hedgehun55)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "ArmoDrillo" (https://sketchfab.com/3d-models/armodrillo-b41e94b55a90466086dbee50a54c9c6b) by DHedge (https://sketchfab.com/Hedgehun55) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
